@@ -2,6 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import DataProvider from './context/DataContext';
 import FileUploader from './components/FileUploader';
+import HomePage from './views/HomePage';
+import MoviesPage from './views/MoviesPage';
+import ActorsPage from './views/ActorsPage';
 
 function App() {
 
@@ -10,8 +13,9 @@ function App() {
       <BrowserRouter>
         <Routes>
               <Route path='/' element ={<FileUploader />}/>
-              <Route path=''  />
-              <Route path=''/>
+              <Route path='/home' element={<HomePage />}  />
+              <Route path='/movies' element={<MoviesPage />}/>
+              <Route path='/actors' element={<ActorsPage />} />
             </Routes>
       </BrowserRouter>
     </DataProvider>
