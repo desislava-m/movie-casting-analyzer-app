@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import DataProvider from './context/DataContext';
 import FileUploader from './components/FileUploader';
-import HomePage from './views/HomePage';
+import HomePage from './views/Homepage';
 import MoviesPage from './views/MoviesPage';
 import ActorsPage from './views/ActorsPage';
 

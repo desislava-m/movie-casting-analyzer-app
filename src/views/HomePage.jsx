@@ -18,6 +18,10 @@ function returnToUploaderPage() {
     navigate('/')
 }
 
+roles.forEach(element => {
+    
+});
+
 
     return(
         <>
