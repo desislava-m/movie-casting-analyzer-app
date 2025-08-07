@@ -33,7 +33,6 @@ export default function FileUploader() {
     }
 
 
-
     function handleFileUpload(e) {
         const file = e.target.files[0];
 

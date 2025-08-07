@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 import { useNavigate } from "react-router-dom"
+import Navbar from "../components/Navbar"
 
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ function returnToUploaderPage() {
 
     return(
         <>
+        <Navbar />
         <button onClick={() => returnToUploaderPage()} >Go back</button>
         </>
     )

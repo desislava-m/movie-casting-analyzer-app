@@ -11,24 +11,24 @@ export default function DataProvider({ children }) {
     const [ roles, setRoles ] = useState([]);
     const [ movies, setMovies ] = useState([]);
 
-    // useEffect(() => {
-    //     const storedActors = localStorage.getItem("actors");
-    //     const storedRoles = localStorage.getItem("roles");
-    //     const storedMovies = localStorage.getItem("movies");
+    useEffect(() => {
+        const storedActors = localStorage.getItem("actors");
+        const storedRoles = localStorage.getItem("roles");
+        const storedMovies = localStorage.getItem("movies");
 
-    //     if(storedActors) {
-    //         setActors(JSON.parse(storedActors));
-    //     }
+        if(storedActors) {
+            setActors(JSON.parse(storedActors));
+        }
 
-    //      if(storedRoles) {
-    //         setRoles(JSON.parse(storedRoles));
-    //     }
+         if(storedRoles) {
+            setRoles(JSON.parse(storedRoles));
+        }
 
-    //     if(storedMovies) {
-    //         setMovies(JSON.parse(storedMovies));
-    //     }
+        if(storedMovies) {
+            setMovies(JSON.parse(storedMovies));
+        }
         
-    // }, [])
+    }, [])
 
     return (
         <DataContext.Provider value = {{
