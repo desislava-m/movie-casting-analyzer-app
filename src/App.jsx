@@ -5,6 +5,7 @@ import FileUploader from './components/FileUploader';
 import HomePage from './views/Homepage';
 import MoviesPage from './views/MoviesPage';
 import ActorsPage from './views/ActorsPage';
+import Movie from './components/Movie';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
               <Route path='/home' element={<HomePage />}  />
               <Route path='/movies' element={<MoviesPage />}/>
               <Route path='/actors' element={<ActorsPage />} />
+              <Route path='/movie/:id' element={<Movie />}/>
             </Routes>
       </BrowserRouter>
     </DataProvider>

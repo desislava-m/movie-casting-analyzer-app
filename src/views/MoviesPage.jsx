@@ -16,7 +16,7 @@ export default function MoviesPage() {
           {movies.map((movie) => {
             return (
                 <li key={movie.id}>
-                    <Link>{movie.title}</Link>
+                    <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
                 </li>
             )
           })}
