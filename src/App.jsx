@@ -6,6 +6,7 @@ import HomePage from './views/Homepage';
 import MoviesPage from './views/MoviesPage';
 import ActorsPage from './views/ActorsPage';
 import Movie from './components/Movie';
+import Actor from './components/Actor';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
               <Route path='/movies' element={<MoviesPage />}/>
               <Route path='/actors' element={<ActorsPage />} />
               <Route path='/movie/:id' element={<Movie />}/>
+              <Route path='/actor/:id' element={<Actor />}/>
             </Routes>
       </BrowserRouter>
     </DataProvider>
