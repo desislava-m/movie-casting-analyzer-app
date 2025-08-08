@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import { useParams } from "react-router-dom";
+import Navbar from "./Navbar";
 
 
 export default function Actor() {
@@ -31,6 +32,7 @@ export default function Actor() {
 
     return (
         <>
+        <Navbar />
         <h1>{`${actorName}'s Movies`}</h1>
         <ul>
             {moviesAndRoles.map((item, index) => {
