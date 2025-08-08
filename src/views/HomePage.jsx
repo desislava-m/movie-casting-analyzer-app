@@ -84,12 +84,43 @@ function returnToUploaderPage() {
     }
   }, [actors, movies, roles]);
 
+  if(!actors.length === 0 || movies.length === 0 || roles.length === 0) {
+    return <p>Loading data...</p>
+  }
+
+
+const { mostFrequentPair, freqPairMovies, maxCount } = mostFrequentActors(roles);
+const pairArray = mostFrequentPair.split('-');
+const actor1Id = pairArray[0];
+const actor2Id = pairArray[1];
+
+const actor1Obj = actors.find((a) => a.id == actor1Id);
+const actor2Obj = actors.find((a) => a.id == actor2Id);
+
+const movieTitlesArr = [];
+
+freqPairMovies.forEach(element => {
+    const movieObject = movies.find((m) => m.id == element);
+    const title = movieObject.title;
+    movieTitlesArr.push(title);
+});
+
 
 
     return(
         <>
         <Navbar />
         <button onClick={() => returnToUploaderPage()} >Go back</button>
+        <h1>Top Actor Pair</h1>
+        <h2>{`${actor1Obj.fullname} - ${actor2Obj.fullname}`}</h2>
+        <p>{`Appeared in ${maxCount} movies together`}</p>
+        <ul>
+            {movieTitlesArr.map((title, index) => {
+                return (
+                    <li key={index}>{title}</li>
+                )
+            })}
+        </ul>
         </>
     )
 }
