@@ -23,6 +23,10 @@ function mostFrequentActors(roles) {
 
    for(const movieIDkey in actorsByMovie) {
     const actorsArray = actorsByMovie[movieIDkey];
+    if(actorsArray.length < 2) {
+        console.log("Movie has less than two actors")
+        return;
+    }
 
     for(let i = 0; i < actorsArray.length; i++) {
         for(let j = i + 1; j < actorsArray.length; j++) {
