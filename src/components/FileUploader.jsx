@@ -84,20 +84,26 @@ export default function FileUploader() {
 
 
     return (
-        <>
-            <div>
-                <h2>Please upload your Actors, Movies and Roles csv files.</h2>
-                <input type="file" accept=".csv" onChange={handleFileUpload} />
-                {error && <p style={{ color: "red" }}>{error}</p>}
-                {missingMessage && <p style={{ color: "red" }}>{missingMessage}</p>}
-            </div>
+        <div className="uploader-background">
+            <div className="transparent-wallpaper">
+                <div className="uploader-headline">
+                    <h1>Movie Casting Analyzer</h1>
+                    <label className="file-upload-label">
+                        Upload CSV File
+                        <input type="file" accept=".csv" onChange={handleFileUpload} style={{ display: 'none' }}/>
+                    </label>
+                    {error && <p className="upload-error">{error}</p>}
+                    {missingMessage && <p className="upload-error">{missingMessage}</p>}
+                
 
-            <button onClick={() => {
-                localStorage.clear();
-                setActors([]);
-                setMovies([]);
-                setRoles([]);
-            }}>Clear</button>
-        </>
+                    <button className="clear-button" onClick={() => {
+                        localStorage.clear();
+                        setActors([]);
+                        setMovies([]);
+                        setRoles([]);
+                    }}>Clear</button>
+                </div>
+            </div>
+        </div>
     )
 }
