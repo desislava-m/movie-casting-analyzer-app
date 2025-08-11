@@ -14,7 +14,7 @@ function parseDate(dateStr) {
 
  
   if (/^\d{2}\/\d{2}\/\d{4}$/.test(dateStr)) {
-    const [day, month, year] = dateStr.split('/');
+    const [month, day, year] = dateStr.split('/');
     return new Date(`${year}-${month}-${day}`);
   }
 
@@ -34,13 +34,8 @@ function parseDate(dateStr) {
     return new Date(dateStr);
   }
 
-
   return null; 
 }
-
-
-
-
 
 export default function Movie() {
 
@@ -53,16 +48,15 @@ export default function Movie() {
 
     const movie = movies.find((movie) => movie.id == id)
     const movieName = movie.title;
- 
     
     const movieRoles = roles.filter((role) => role.movieid == id);
- 
 
+    const movieDate = parseDate(movie.releasedate);
     return (
         <>
             <Navbar />
             <h2>{movieName}</h2>
-            <p>Movie date</p>
+            <p>{movieDate.toLocaleDateString('bg-BG')}</p>
             <ul>
                 {movieRoles.map((role) => {
                     const actor = actors.find((actor) => actor.id == role.actorid);

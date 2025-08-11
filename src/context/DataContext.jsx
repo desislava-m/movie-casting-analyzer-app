@@ -10,6 +10,7 @@ export default function DataProvider({ children }) {
     const [ actors, setActors ] = useState([]);
     const [ roles, setRoles ] = useState([]);
     const [ movies, setMovies ] = useState([]);
+    
 
     useEffect(() => {
         const storedActors = localStorage.getItem("actors");
