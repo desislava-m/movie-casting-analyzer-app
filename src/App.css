@@ -1,6 +1,6 @@
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 60px 0;
   height: 100%;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,11 +68,43 @@ html, body {
 }
 
 .file-upload-label:hover {
-  background-color: #7800c8;
+  background-color: #9c51ff;
 }
 
 .upload-error {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 50px;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #222;
+  color: white;
+  padding: 15px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: white;
+}
+
+.nav-links a:hover {
+  color:#9c51ff;
+}
+
+.back-button {
+  font-weight: 600;
 }

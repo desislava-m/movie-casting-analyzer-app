@@ -79,6 +79,8 @@ export default function HomePage() {
         navigate('/')
     }
 
+   
+
     useEffect(() => {
         const missingData = actors.length === 0 || movies.length === 0 || roles.length === 0;
 
@@ -120,8 +122,7 @@ export default function HomePage() {
 
     return (
         <>     
-            <Navbar />
-            <button onClick={() => returnToUploaderPage()} >Go back</button>
+            <Navbar onGoBack={returnToUploaderPage}/>
             <h1>Top Actor Pair</h1>
             <h2>{`${actor1Obj.fullname} - ${actor2Obj.fullname}`}</h2>
             <p>{`Appeared in ${maxCount} movies together`}</p>
