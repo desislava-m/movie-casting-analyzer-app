@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react"
 import { DataContext } from "../context/DataContext"
-import { useNavigate } from "react-router-dom"
 import Navbar from "../components/Navbar"
+import { useReturnToUploaderPage } from "../hooks/useReturnToUploader"
+import { useNavigate } from "react-router-dom"
 
 
 function getMostFrequentActors(roles) {
@@ -67,20 +68,11 @@ function getMostFrequentActors(roles) {
 
 export default function HomePage() {
 
-    const navigate = useNavigate()
 
+    const returnToUploaderPage = useReturnToUploaderPage();
     const { actors, setActors, roles, setRoles, movies, setMovies } = useContext(DataContext);
-
-    function returnToUploaderPage() {
-        localStorage.clear();
-        setActors([]);
-        setRoles([]);
-        setMovies([]);
-        navigate('/')
-    }
-
+    const navigate = useNavigate();
    
-
     useEffect(() => {
         const missingData = actors.length === 0 || movies.length === 0 || roles.length === 0;
 
@@ -98,7 +90,7 @@ export default function HomePage() {
     if(result.error) {
         return (
             <>
-            <button onClick={() => returnToUploaderPage()} >Go back</button>
+            <button onClick={returnToUploaderPage} >Go back</button>
             {result.error}
             </>
         )
@@ -123,7 +115,7 @@ export default function HomePage() {
     return (
         <div className="actor-pair-container">
             <div className="transparent-wallpaper">  
-                <Navbar onGoBack={returnToUploaderPage}/>
+                <Navbar />
                 <div className="pair-text-container">
                     <h1>Top Actor Pair</h1>
                     <h2>{`${actor1Obj.fullname} - ${actor2Obj.fullname}`}</h2>

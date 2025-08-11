@@ -3,9 +3,11 @@ import { DataContext } from "../context/DataContext";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
+
 export default function ActorsPage() {
 
     const { actors } = useContext(DataContext);
+    
 
     return (
         <div className="actor-list-container">
