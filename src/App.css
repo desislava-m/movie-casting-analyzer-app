@@ -102,6 +102,14 @@ nav {
   display: flex;
 }
 
+.back-button {
+  padding: 5px 15px;
+}
+
+.back-button:hover {
+   background-color: #d5b0ee;
+}
+
 .nav-links-container {
   flex: 1;
   display: flex;
