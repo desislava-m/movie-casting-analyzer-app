@@ -54,10 +54,11 @@ export default function Movie() {
     const movieDate = parseDate(movie.releasedate);
     return (
         <div className="movie-wallpaper">
+          <div className="transparent-wallpaper">
             <Navbar />
             <div className="movie-container">
-                <h1>{movieName}</h1>
-                <p>{movieDate.toLocaleDateString('bg-BG')}</p>
+              <h1>{movieName}</h1>
+              <p>{movieDate.toLocaleDateString('bg-BG')}</p>
                 <ul className="list">
                     {movieRoles.map((role) => {
                         const actor = actors.find((actor) => actor.id == role.actorid);
@@ -71,6 +72,7 @@ export default function Movie() {
                         )
                     })}
                 </ul>
+            </div>
             </div>
         </div>
     )

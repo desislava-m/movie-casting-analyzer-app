@@ -160,8 +160,6 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); 
-  width: 100%;
   margin-top: 150px;
   
 }
@@ -249,8 +247,6 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); 
-  width: 100%;
   margin-top: 150px;
 }
 
@@ -298,4 +294,3 @@ nav {
 .movie-container h1 {
   margin-bottom: 15px;
 }
-
