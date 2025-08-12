@@ -32,20 +32,20 @@ export default function Actor() {
 
     return (
         <div className="actor-wallpaper">
-        <Navbar />
-        <div className="actor-movies-container">
-            <h1>{`${actorName}'s Movies`}</h1>
-            <ul className="list">
-                {moviesAndRoles.map((item, index) => {
-                    const title = item[0];
-                    const role = item[1];
+            <Navbar />
+            <div className="actor-movies-container">
+                <h1>{`${actorName}'s Movies`}</h1>
+                <ul className="list">
+                    {moviesAndRoles.map((item, index) => {
+                        const title = item[0];
+                        const role = item[1];
 
-                    return (
-                        <li key={index}>{`${title} playing ${role}`}</li>
-                    )
-                })}
-            </ul>
-        </div>
+                        return (
+                            <li key={index}>{`${title} playing ${role}`}</li>
+                        )
+                    })}
+                </ul>
+            </div>
         </div>
     )
 }

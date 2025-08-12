@@ -53,23 +53,25 @@ export default function Movie() {
 
     const movieDate = parseDate(movie.releasedate);
     return (
-        <>
+        <div className="movie-wallpaper">
             <Navbar />
-            <h2>{movieName}</h2>
-            <p>{movieDate.toLocaleDateString('bg-BG')}</p>
-            <ul>
-                {movieRoles.map((role) => {
-                    const actor = actors.find((actor) => actor.id == role.actorid);
-                    const actorName = actor.fullname;
-                    const roleName = (role.rolename === "NULL" || role.rolename === "null")  ? "Unnamed" : role.rolename;
+            <div className="movie-container">
+                <h1>{movieName}</h1>
+                <p>{movieDate.toLocaleDateString('bg-BG')}</p>
+                <ul className="list">
+                    {movieRoles.map((role) => {
+                        const actor = actors.find((actor) => actor.id == role.actorid);
+                        const actorName = actor.fullname;
+                        const roleName = (role.rolename === "NULL" || role.rolename === "null")  ? "Unnamed" : role.rolename;
 
-                    return (
-                        <li key={role.id}>
-                            {`${actorName} as ${roleName}`}
-                        </li>
-                    )
-                })}
-            </ul>
-        </>
+                        return (
+                            <li key={role.id}>
+                                {`${actorName} as ${roleName}`}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+        </div>
     )
 }

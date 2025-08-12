@@ -155,9 +155,6 @@ nav {
   display: flex;
   text-align: center;
 }
-.actors-list ul {
-  padding-left: 0;
-}
 
 .actors-background {
   background-image: url(./images/Cover_EdLetterPage.jpg);
@@ -173,6 +170,8 @@ nav {
 
 .list {
   list-style-type: none;
+  padding-left: 0;
+  text-align: center;
 }
 
 .list a {
@@ -209,7 +208,7 @@ nav {
 }
 
 .movies-background {
-  background-image: url(./images/penguin.jpg);
+  background-image: url(./images/stranger-things.jpg);
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -245,6 +244,34 @@ nav {
   text-align: center;
 }
 
-.movies-list ul {
-  padding-left: 0;
+
+
+.movie-wallpaper {
+  background-image: url(./images/ballerina.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.movie-container p {
+  margin-top: 0;
+}
+
+.movie-container h1 {
+  margin-bottom: 15px;
+}
+
