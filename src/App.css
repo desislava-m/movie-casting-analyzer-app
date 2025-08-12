@@ -82,20 +82,42 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #222;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
+}
 
-  background-color: #222;
-  color: white;
-  padding: 15px;
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.back-button-container {
+  flex: 1;
+  display: flex;
+}
+
+.nav-links-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-right-column {
+  flex: 1;
 }
 
 .nav-links {
   display: flex;
   gap: 10px;
-  margin: 0 auto;
 }
+
+
 
 .nav-links a {
   color: white;
@@ -104,6 +126,8 @@ nav {
 .nav-links a:hover {
   color:#9c51ff;
 }
+
+
 
 .back-button {
   font-weight: 600;
