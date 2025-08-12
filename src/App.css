@@ -129,49 +129,42 @@ nav {
   justify-content: center;
 }
 
-.list {
-  list-style-type: none;
-  width: 100%;
-  text-align: left; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.list-container {
-  flex: 1; 
-  overflow-y: auto;
+.actor-list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  background-color: black;
   justify-content: center;
-}
-
-.list-container h1 {
-  font-size: 60px;
+  align-items: center;
   color: white;
-  margin-top: 400px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  width: 100%;
 }
 
-.image-container {
-  flex: 1;
-  background-image: url(./images/actors-1.png);
-  background-size: cover;
+.actors-header {
+  max-height: 200px;
+}
+
+.actors-list {
+  display: flex;
+  max-height: 600px;
+}
+
+.actors-background {
+  background-image: url(./images/Cover_EdLetterPage.jpg);
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
 
-.image-list-container {
-  
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+.list {
+  list-style-type: none;
 }
 
 .list a {
-  color:white;
+  color: white;
 }

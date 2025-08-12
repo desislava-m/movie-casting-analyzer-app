@@ -10,25 +10,29 @@ export default function ActorsPage() {
     
 
     return (
-        <div className="actor-list-container">
+        <div className="actors-background">
             
             <Navbar />
-            <div className="image-list-container">
-                <div className="list-container">
+            <div className="actor-list-container">
+                <div className="actors-header">
+                
                     <h1>All actors:</h1>
-                    <ul className="list">
-                        {actors.map((actor) => {
-                            return (
-                                <li key={actor.id}>
-                                    <Link to={`/actor/${actor.id}`}>{actor.fullname}</Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
+
                 </div>
-                <div className="image-container">
-                </div>   
-            </div>   
+                <div className="actors-list">
+                        <ul className="list">
+                            {actors.map((actor) => {
+                                return (
+                                    <li key={actor.id}>
+                                        <Link to={`/actor/${actor.id}`}>{actor.fullname}</Link>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                </div>    
+                    
+                
+            </div>
         </div>
     )
 }
