@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -14,7 +15,7 @@ html, body {
 .clear-button {
   background-color: #f0ebff;
   color: rgb(7, 0, 14);
-  font-weight:600;
+  font-weight: 600;
   border: none;
   padding: 10px 25px;
   border-radius: 5px;
@@ -28,11 +29,11 @@ html, body {
 
 .uploader-background {
   background-image: url(./images/dc.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100%;  
+  width: 100%;
 }
 
 .uploader-headline {
@@ -48,11 +49,11 @@ html, body {
   font-style: normal;
   margin-bottom: 60px;
 }
- 
+
 .transparent-wallpaper {
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   min-height: 100vh;
   width: 100%;
@@ -91,7 +92,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #222;
+  background-color: #131313;
   color: white;
   display: flex;
   align-items: center;
@@ -191,7 +192,7 @@ nav {
 
 .actor-pair-container {
   background-image: url(./images/the-gorge.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -208,12 +209,10 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 150px;
-  
+
 }
 
 .actors-headline {
-  margin-top: 100px;
   max-height: 150px;
 }
 
@@ -226,8 +225,11 @@ nav {
 }
 
 .actors-list {
-  display: flex;
- 
+  max-height: 700px;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #b2a4d8 transparent;
 }
 
 .actors-list ul {
@@ -237,7 +239,7 @@ nav {
 
 .actors-background {
   background-image: url(./images/Cover_EdLetterPage.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -262,12 +264,11 @@ nav {
 
 .list a:hover {
   color: #b2a4d8;
-  
 }
 
 .actor-wallpaper {
   background-image: url(./images/penguin.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -304,10 +305,10 @@ nav {
 
 .movies-background {
   background-image: url(./images/stranger-things.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -320,12 +321,10 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 150px;
 }
 
 .movies-headline {
   max-height: 150px;
-  margin-top: 100px;
 }
 
 .movies-headline h1 {
@@ -337,8 +336,11 @@ nav {
 }
 
 .movies-list {
-  display: flex;
-  text-align: center;
+  max-height: 700px;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #b2a4d8 transparent;
 }
 
 .movies-list ul {
@@ -347,7 +349,7 @@ nav {
 
 .movie-wallpaper {
   background-image: url(./images/ballerina.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -382,4 +384,136 @@ nav {
 
 .movie-container ul {
   margin-top: 0;
+}
+
+
+@media only screen and (max-width: 1060px) {
+
+  .uploader-headline {
+    max-width: 700px;
+  }
+
+  .uploader-headline h1 {
+    line-height: 1.5;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .uploader-headline {
+    max-width: 700px;
+  }
+
+  .uploader-headline h1 {
+    font-size: 60px;
+  }
+
+  .uploader-headline h1 {
+    line-height: 1.5;
+  }
+
+  .file-upload-label {
+    font-size: 18px;
+  }
+
+  .upload-error {
+    font-size: 18px;
+  }
+
+  .pair-text-container h1 {
+    font-size: 40px;
+  }
+
+  .pair-text-container h2 {
+    font-size: 30px;
+  }
+
+  .pair-text-container h3 {
+    font-size: 20px;
+  }
+
+  .pair-text-container ul {
+    font-size: 25px;
+  }
+
+  .actor-movies-container h1 {
+    font-size: 35px;
+  }
+
+  .actor-movies-container ul {
+    font-size: 25px;
+  }
+
+  .actor-wallpaper {
+    background-position:unset;
+  }
+
+  .actor-movies-container {
+    background-image: linear-gradient(#00000050, #000000);
+    width: 100%;
+  }
+
+  .movie-container h1 {
+    font-size: 35px;
+  }
+
+  .movie-container ul {
+    font-size: 25px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .uploader-headline {
+    max-width: 700px;
+  }
+
+  .uploader-headline h1 {
+    line-height: 1.5;
+  }
+
+  .back-button {
+    font-size: 14px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .pair-text-container h1 {
+    font-size: 35px;
+  }
+
+  .pair-text-container h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .pair-text-container h3 {
+    font-size: 16px;
+  }
+
+  .pair-text-container ul {
+    font-size: 20px;
+  }
+
+  .actors-headline h1 {
+    font-size: 30px;
+  }
+
+  .actors-list li {
+    font-size: 16px;
+  }
+
+  .actor-movies-container h1 {
+    font-size: 30px;
+  }
+
+  .actor-movies-container ul {
+    font-size: 20px;
+  }
 }
