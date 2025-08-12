@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="nav-content">
 
         <div className="back-button-container">
-          <button onClick={returnToUploaderPage} className="back-button">Go back</button> 
+          <button onClick={returnToUploaderPage} className="back-button">Back to Upload</button> 
         </div>
 
         <div className="nav-links-container">

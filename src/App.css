@@ -12,7 +12,7 @@ html, body {
 }
 
 .clear-button {
-  background-color: rgb(240, 235, 255);
+  background-color: #f0ebff;
   color: rgb(7, 0, 14);
   font-weight:600;
   border: none;
@@ -22,7 +22,8 @@ html, body {
 }
 
 .clear-button:hover {
-  background-color: #d5b0ee;
+  background-color: #b2a4d8;
+  transition: background-color 1s;
 }
 
 .uploader-background {
@@ -45,6 +46,7 @@ html, body {
   font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
+  margin-bottom: 60px;
 }
  
 .transparent-wallpaper {
@@ -61,24 +63,27 @@ html, body {
 }
 
 .file-upload-label {
-  background-color: #450679;
+  background-color: #2f0d6d;
   color: white;
-  padding: 10px 25px;
+  padding: 15px 25px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 20px;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: background-color 1s;
+  margin-bottom: 10px;
 }
 
 .file-upload-label:hover {
-  background-color: #9c51ff;
+  background-color: #6c45b4;
 }
 
 .upload-error {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 200;
   margin-bottom: 50px;
+  margin-top: 0;
 }
 
 
@@ -91,7 +96,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 12px;
 }
 
 .nav-content {
@@ -108,10 +113,13 @@ nav {
 
 .back-button {
   padding: 5px 15px;
+  border: none;
 }
 
 .back-button:hover {
-   background-color: #d5b0ee;
+  background-color: #b0a4d8;
+  transition: background-color 0.4s;
+  border: none;
 }
 
 .nav-links-container {
@@ -137,7 +145,8 @@ nav {
 }
 
 .nav-links a:hover {
-  color:#9c51ff;
+  color: #b2a4d8;
+  transition: color 0.4s;
 }
 
 
@@ -210,11 +219,20 @@ nav {
 
 .actors-headline h1 {
   margin-bottom: 10px;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
 
 .actors-list {
   display: flex;
-  text-align: center;
+ 
+}
+
+.actors-list ul {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .actors-background {
@@ -232,7 +250,10 @@ nav {
 .list {
   list-style-type: none;
   padding-left: 0;
-  text-align: center;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .list a {
@@ -240,7 +261,8 @@ nav {
 }
 
 .list a:hover {
-  color:#9c51ff;
+  color: #b2a4d8;
+  
 }
 
 .actor-wallpaper {
@@ -262,6 +284,18 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.actor-movies-container ul {
+  margin-top: 0;
+}
+
+.actor-movies-container h1 {
+  margin-bottom: 30px;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
 
 .actor-list-container ul {
@@ -296,6 +330,10 @@ nav {
 
 .movies-headline h1 {
   margin-bottom: 10px;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
 
 .movies-list {
@@ -303,7 +341,9 @@ nav {
   text-align: center;
 }
 
-
+.movies-list ul {
+  font-size: 18px
+}
 
 .movie-wallpaper {
   background-image: url(./images/ballerina.jpg);
@@ -328,8 +368,18 @@ nav {
 
 .movie-container p {
   margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .movie-container h1 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.movie-container ul {
+  margin-top: 0;
 }
