@@ -119,7 +119,7 @@ export default function HomePage() {
                 <div className="pair-text-container">
                     <h1>Top Actor Pair</h1>
                     <h2>{`${actor1Obj.fullname} - ${actor2Obj.fullname}`}</h2>
-                    <p>{`Appeared in ${maxCount} movies together`}</p>
+                    <h3>{`Appeared in ${maxCount} movies together`}</h3>
                     <ul className="list" >
                         {movieTitlesArr.map((title, index) => {
                             return (

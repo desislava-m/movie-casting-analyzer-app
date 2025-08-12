@@ -3,7 +3,8 @@ html, body {
   padding: 0;
   height: 100%;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
 }
 
 #root {
@@ -41,6 +42,9 @@ html, body {
 
 .uploader-headline h1 {
   font-size: 70px;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
  
 .transparent-wallpaper {
@@ -129,6 +133,7 @@ nav {
 
 .nav-links a {
   color: white;
+  font-size: 18px;
 }
 
 .nav-links a:hover {
@@ -147,6 +152,32 @@ nav {
   flex-direction: column;
   align-items: center;
   color: white;
+}
+
+.pair-text-container h1 {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.pair-text-container h2 {
+  font-weight: 500;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.pair-text-container h3 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.pair-text-container ul {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
 }
 
 .actor-pair-container {
