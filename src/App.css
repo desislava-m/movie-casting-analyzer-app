@@ -448,7 +448,7 @@ nav {
   }
 
   .actor-wallpaper {
-    background-position:unset;
+    background-position: unset;
   }
 
   .actor-movies-container {
@@ -463,17 +463,35 @@ nav {
   .movie-container ul {
     font-size: 25px;
   }
+
+  .movie-wallpaper {
+    background-size: unset;
+  }
 }
 
 
 @media only screen and (max-width: 600px) {
 
   .uploader-headline {
-    max-width: 700px;
+    max-width: 400px;
   }
 
   .uploader-headline h1 {
-    line-height: 1.5;
+    line-height: 1.6;
+  }
+
+  .uploader-headline h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .file-upload-label {
+    font-size: 16px;
+  }
+
+  .upload-error {
+    font-size: 16px;
+    margin-bottom: 30px;
   }
 
   .back-button {
@@ -516,4 +534,52 @@ nav {
   .actor-movies-container ul {
     font-size: 20px;
   }
+
+  .movie-container h1 {
+    font-size: 30px;
+  }
+
+  .movie-container p {
+    font-size: 16px;
+  }
+
+  .movie-container ul {
+    font-size: 20px;
+  }
+
+  .movie-wallpaper {
+    background-size: auto;
+    background-position: initial;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-right-column {
+    flex: none;
+  }
+
+  .clear-button {
+    font-size: 14px;
+  }
+
+  .pair-text-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .pair-text-container h3 {
+    font-size: 14px;
+  }
+
+  .pair-text-container ul {
+    font-size: 16px;
+  }
+ 
+  .actor-movies-container h1 {
+    font-size: 30px;
+    max-width: 400px;
+    text-align: center;
+    line-height: 2;
+  }
+
 }
