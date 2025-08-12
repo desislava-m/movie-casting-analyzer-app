@@ -58,7 +58,7 @@ export default function Movie() {
             <Navbar />
             <div className="movie-container">
               <h1>{movieName}</h1>
-              <p>{movieDate.toLocaleDateString('bg-BG')}</p>
+              <p>{`Release Date: ${movieDate.toLocaleDateString('bg-BG')}`}</p>
                 <ul className="list">
                     {movieRoles.map((role) => {
                         const actor = actors.find((actor) => actor.id == role.actorid);
