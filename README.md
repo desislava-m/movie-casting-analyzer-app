@@ -1,7 +1,11 @@
 # Movie Casting Analyzer Web App
 
-This application allows the user to upload three csv files with roles, movies and actors data.
-It parses each csv file into an array of objects where each object represents a row from the csv file.
+At the start view the application allows the user to upload three csv files with roles, movies and actors data.
+handleFileUpload func takes the uploaded file, reads it as text and passes it as a parameter to parseCsv function.
+parseCsv takes the csv file, extracts the first row (the headers) and turns them to lower case. With a forEach loop parses every csv file into an array of objects where the object key is a column from the headers and the value is the corresponding column data from every row.
+
+handleFileUpload function takes the result object from parseCsv { headers, data: result } and checks if the file headers include the words "birthdate", "title" or "rolename" in order to decide in which state (useState hook) to save the array of objects. An additional useEffect hook checks whether any of the states roles, actors or movies is empty and prompts the user to upload the
+needed files if any. After all the files have been uploaded the user lands on the home page.
 
 ## Expanding the ESLint configuration
 
