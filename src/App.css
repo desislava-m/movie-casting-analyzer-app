@@ -138,15 +138,25 @@ nav {
   color: white;
   background-color: rgba(0, 0, 0, 0.6); 
   width: 100%;
+  margin-top: 150px;
+  
 }
 
-.actors-header {
-  max-height: 200px;
+.actors-headline {
+  margin-top: 100px;
+  max-height: 150px;
+}
+
+.actors-headline h1 {
+  margin-bottom: 10px;
 }
 
 .actors-list {
   display: flex;
-  max-height: 600px;
+  text-align: center;
+}
+.actors-list ul {
+  padding-left: 0;
 }
 
 .actors-background {
@@ -154,7 +164,7 @@ nav {
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -192,4 +202,49 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.actor-list-container ul {
+  list-style-type: none;
+}
+
+.movies-background {
+  background-image: url(./images/penguin.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.movies-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); 
+  width: 100%;
+  margin-top: 150px;
+}
+
+.movies-headline {
+  max-height: 150px;
+  margin-top: 100px;
+}
+
+.movies-headline h1 {
+  margin-bottom: 10px;
+}
+
+.movies-list {
+  display: flex;
+  text-align: center;
+}
+
+.movies-list ul {
+  padding-left: 0;
 }

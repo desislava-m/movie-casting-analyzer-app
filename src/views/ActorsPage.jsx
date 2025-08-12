@@ -14,7 +14,7 @@ export default function ActorsPage() {
             
             <Navbar />
             <div className="actor-list-container">
-                <div className="actors-header">
+                <div className="actors-headline">
                 
                     <h1>All actors:</h1>
 
