@@ -168,3 +168,28 @@ nav {
 .list a {
   color: white;
 }
+
+.list a:hover {
+  color:#9c51ff;
+}
+
+.actor-wallpaper {
+  background-image: url(./images/penguin.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.actor-movies-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

@@ -31,19 +31,21 @@ export default function Actor() {
     const actorName = actorObj.fullname;
 
     return (
-        <>
+        <div className="actor-wallpaper">
         <Navbar />
-        <h1>{`${actorName}'s Movies`}</h1>
-        <ul>
-            {moviesAndRoles.map((item, index) => {
-                const title = item[0];
-                const role = item[1];
+        <div className="actor-movies-container">
+            <h1>{`${actorName}'s Movies`}</h1>
+            <ul className="list">
+                {moviesAndRoles.map((item, index) => {
+                    const title = item[0];
+                    const role = item[1];
 
-                return (
-                    <li key={index}>{`${title} playing ${role}`}</li>
-                )
-            })}
-        </ul>
-        </>
+                    return (
+                        <li key={index}>{`${title} playing ${role}`}</li>
+                    )
+                })}
+            </ul>
+        </div>
+        </div>
     )
 }
