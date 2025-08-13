@@ -1,12 +1,12 @@
-import { useContext, useEffect } from "react"
+import { act, useContext, useEffect } from "react"
 import { DataContext } from "../context/DataContext"
 import Navbar from "../components/Navbar"
 import { useReturnToUploaderPage } from "../hooks/useReturnToUploader"
 import { useNavigate } from "react-router-dom"
 
 
-function getMostFrequentActors(roles) {
 
+function groupActorsByMovie(roles) {
     const actorsByMovie = {};
 
     roles.forEach(role => {
@@ -20,6 +20,10 @@ function getMostFrequentActors(roles) {
         actorsByMovie[movieID].push(actorID);
     });
 
+    return actorsByMovie;
+}
+
+function getEachPairCount(actorsByMovie) {
     const pairCount = {};
 
     for (const movieIDkey in actorsByMovie) {
@@ -43,6 +47,18 @@ function getMostFrequentActors(roles) {
                 pairCount[pairKey].push(movieIDkey);
             }
         }
+    }
+
+    return pairCount;
+}
+
+function getMostFrequentActors(roles) {
+
+    const actorsByMovie = groupActorsByMovie(roles);
+    const pairCount = getEachPairCount(actorsByMovie);
+    
+    if(pairCount.error) {
+        return pairCount;
     }
 
     let maxCount = 0;
@@ -70,7 +86,7 @@ export default function HomePage() {
 
 
     const returnToUploaderPage = useReturnToUploaderPage();
-    const { actors, setActors, roles, setRoles, movies, setMovies } = useContext(DataContext);
+    const { actors, roles, movies } = useContext(DataContext);
     const navigate = useNavigate();
    
     useEffect(() => {
@@ -89,10 +105,19 @@ export default function HomePage() {
 
     if(result.error) {
         return (
-            <>
-            <button onClick={returnToUploaderPage} >Go back</button>
-            {result.error}
-            </>
+            <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                minHeight: "50vh",
+                textAlign: "center"
+            }}
+        >
+            <button onClick={returnToUploaderPage}>Go back</button>
+            <p>{result.error}</p>
+        </div>
         )
     }
 
